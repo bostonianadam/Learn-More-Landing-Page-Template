@@ -1,1 +1,135 @@
+/*Variables*/
+:root {
+    --template-primary-color: rgb(51,204,153);
+    --template-primary-color-transparency: rgba(51,204,153,.7);
+    --template-body-background: #eee;
+    --template-footer-background: #333;
+}
+/*Bootstrap overrides*/
+.navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0,0,0,.8);
+}
+.btn-submit, .btn-submit:active, .btn-submit:focus {
+    background-color: var(--template-primary-color);
+    border-color: var(--template-primary-color);
+    color: #fff;
+}
+.btn-submit:hover {
+    background-color: var(--template-primary-color-transparency);
+    color: #fff;
+}
+/*Template CSS*/
+body {
+    background: var(--template-body-background);
+}
+.navbar {
+    height: 90px;
+}
+.navbarScroll {
+    background: var(--template-primary-color);
+    height: 70px;
+}
+.logo {
+    font-size: 2rem;
+    transition: font-size .5s ease;
+}
+.logoScroll {
+    font-size: 1.5rem;
+}
+.header {
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+}
+.header .heading-container {
+    background: var(--template-primary-color-transparency);
+    height: 300px;
+    padding-top: 100px;
+}
+.main {
+    margin-top: -25px;
+}
+.wide-callout {
+    background: var(--template-primary-color-transparency);
+}
+.wide-callout-white {
+    background: #fff;
+}
+.email-link, .email-link:hover {
+    color: var(--template-primary-color);
+}
+.footer-inner {
+    background: var(--template-footer-background);
+}
+.footer a {
+    color: var(--template-primary-color);
+}
+.footer a.footer-social-link:hover {
+    text-decoration: none;
+}
+.contact-form-link {
+    color: var(--template-primary-color);
+    cursor: pointer;
+}
+.contact-form-link:hover {
+    text-decoration: underline;
+}
 
+@media (min-width: 851px) {
+    .header {
+        background: url('../img/bg-unsplash-1800.jpg');
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        background: url('../img/bg-unsplash-850.jpg');
+    }
+}
+
+@media (max-width: 767px) {
+    .heading-container h1.display-4 {
+        font-size: 2.9rem;
+    }
+    .heading-container h2.lead {
+        font-size: 1.1rem;
+    }
+    .main {
+        margin-top: 0px;
+    }
+    .footer-inner-content {
+        text-align: center;
+    }
+    .footer-inner-content ul.nav {
+        display: inline-block;
+        margin-top: .5rem;
+    }
+    .footer-inner-content ul.nav li {
+        height: 1.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar .logo {
+        margin: 0 auto;
+    }
+    .navbar .social-nav {
+        display: none;
+    }
+    .header {
+        background: none;
+    }
+    .heading-container h1.display-4 {
+        font-size: 2rem;
+    }
+    .heading-container h2.lead {
+        font-size: 1rem;
+    }
+    .feature-block, .contact-block {
+        margin-bottom: 1rem;
+    }
+}
